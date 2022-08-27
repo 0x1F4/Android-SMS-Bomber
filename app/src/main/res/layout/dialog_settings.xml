@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <ToggleButton
+        android:id="@+id/theme_tile"
+        style="@style/ToggleTile"
+        android:drawableTop="@drawable/ic_baseline_contrast_24" />
+
+    <Button
+        android:id="@+id/donate_tile"
+        style="@style/ActionTile"
+        app:icon="@drawable/ic_baseline_coffee_24" />
+
+    <ToggleButton
+        android:id="@+id/proxy_tile"
+        style="@style/ToggleTile"
+        android:drawableTop="@drawable/ic_baseline_vpn_key_24" />
+
+    <Button
+        android:id="@+id/source_code_tile"
+        style="@style/ActionTile"
+        app:icon="@drawable/ic_octocat_fill" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="theme_tile,proxy_tile,donate_tile,source_code_tile"
+        app:flow_horizontalGap="8dp"
+        app:flow_maxElementsWrap="4"
+        app:flow_verticalGap="8dp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:itemCount="3"
+        tools:listitem="@layout/attack_work_row" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/no_scheduled_attacks"
+        app:layout_constraintBottom_toTopOf="@+id/flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasks"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

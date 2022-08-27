@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name" translatable="false">Bomber</string>
+
+    <string name="repeats">Repeats</string>
+    <string name="start_attack">Start attack</string>
+
+    <string name="phone_error">Invalid number format</string>
+
+    <string name="time_is_incorrect">Time is incorrect</string>
+    <string name="no_scheduled_attacks">No scheduled attacks</string>
+
+    <string name="donate">Donate</string>
+    <string name="proxy">Proxy</string>
+    <string name="source_code">Source code</string>
+    <string name="waiting">Waiting</string>
+
+    <string name="save">Save</string>
+    <string name="proxy_format_error">Invalid proxy format</string>
+
+    <string name="channel_description">Attack progress</string>
+    <string name="attack">Attack</string>
+
+    <string name="telegram_link" translatable="false">t.me/androidsmsbomber</string>
+
+    <string-array name="hints" translatable="false">
+        <item>912 345 67 89</item>
+        <item>50 123 4567</item>
+        <item>172 745317</item>
+        <item>1 202 555 0135</item>
+    </string-array>
+</resources>
